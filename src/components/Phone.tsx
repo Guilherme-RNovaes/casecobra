@@ -1,5 +1,6 @@
 import { cn } from "@/lib/utils"
-import { defaultHead } from "next/head"
+// import { defaultHead } from "next/head"
+import Image from "next/image"
 import { HTMLAttributes } from "react"
 
 interface PhoneProps extends HTMLAttributes<HTMLDivElement> {
@@ -16,7 +17,7 @@ const Phone = ({ imgSrc, className, dark = false, ...props }: PhoneProps) => {
         alt="phone image"
       />
       <div className="absolute -z-10 inset-0">
-        <img src={imgSrc} className="object-cover" alt="overlaying phone image" />
+        <Image src={imgSrc} className="object-cover" alt="overlaying phone image" />
       </div>
     </div>
   )
